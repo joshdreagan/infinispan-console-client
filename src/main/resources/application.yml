@@ -1,0 +1,49 @@
+# Spring Boot
+spring:
+  banner:
+    location: banner.txt
+
+# AMQPHub
+amqphub:
+  amqp10jms:
+    pool:
+      enabled: true
+    remote-url: amqp://localhost:61616
+    #username: admin
+    #password: admin
+
+# Camel Spring Boot
+camel:
+  springboot:
+    name: amqp-console-producer
+    main-run-controller: true
+
+# Infinispan
+infinispan:
+  cache:
+    name: default
+  cache-container:
+    #client-intelligence: BASIC
+    servers: "localhost:11222"
+    security:
+      authentication:
+        enabled: true
+        server-name: cache-service
+        username: client
+        password: password
+        #realm: ApplicationRealm
+        #sasl-mechanism: DIGEST-MD5
+        #sasl-qop: AUTH
+      ssl:
+        enable: true
+        sni-host-name: localhost
+        trust-store: /tmp/client.ts
+        trust-store-password: password
+        
+
+# Logging
+logging:
+  level:
+    root: ERROR
+    #org.apache.camel.examples: DEBUG
+    #org.infinispan: DEBUG
