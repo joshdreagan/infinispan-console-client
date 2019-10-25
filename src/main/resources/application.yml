@@ -25,20 +25,20 @@ infinispan:
   cache-container:
     #client-intelligence: BASIC
     servers: "localhost:11222"
-    security:
-      authentication:
-        enabled: true
-        server-name: cache-service
-        username: client
-        password: password
+    #security:
+      #authentication:
+        #enabled: true
+        #server-name: cache-service
+        #username: client
+        #password: password
         #realm: ApplicationRealm
         #sasl-mechanism: DIGEST-MD5
         #sasl-qop: AUTH
-      ssl:
-        enable: true
-        sni-host-name: localhost
-        trust-store: /tmp/client.ts
-        trust-store-password: password
+      #ssl:
+        #enable: true
+        #sni-host-name: localhost
+        #trust-store: /tmp/client.ts
+        #trust-store-password: password
         
 
 # Logging
